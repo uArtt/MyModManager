@@ -17,7 +17,6 @@ public partial class ModsPageViewModel : ViewModelBase
         ModItems.Add(new ModListItemModel
         {
             IsEnabled = false
-
         });
     }
 

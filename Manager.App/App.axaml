@@ -1,8 +1,8 @@
 ﻿<Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:converters="using:Manager.App.Converters"
-             x:Class="Manager.App.App"
              xmlns:local="using:Manager.App"
+             x:Class="Manager.App.App"
              RequestedThemeVariant="Default">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
@@ -19,7 +19,7 @@
             <converters:SidebarIconConverter x:Key="SidebarIconConverter"/>
 
             <ResourceDictionary.MergedDictionaries>
-                <ResourceInclude Source="/Assets/Icons.axaml"/>
+                <ResourceInclude Source="/Resources/Icons.axaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 

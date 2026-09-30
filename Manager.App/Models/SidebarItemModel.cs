@@ -1,6 +1,7 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
+using CommunityToolkit.Mvvm.ComponentModel;
 using System;
 
 namespace Manager.App.Models;
@@ -19,5 +20,5 @@ public class SidebarItemModel
 
     public string Label { get; }
     public Type ModelType { get; }
-    public StreamGeometry ItemIcon {  get; }
+    public StreamGeometry ItemIcon { get; }
 }
