@@ -12,13 +12,9 @@
         <Grid ColumnDefinitions="48, *">
             <Button Grid.Column="0" 
                     Command="{Binding TogglePaneCommand}">
-                <Grid>
-                    <PathIcon Data="{StaticResource sidebar_close_regular}"
-                              IsVisible="{Binding IsPaneOpen}"/>
-
-                    <PathIcon Data="{StaticResource sidebar_open_regular}"
-                              IsVisible="{Binding IsPaneClosed}"/> 
-                </Grid>
+                <PathIcon
+                    Data="{Binding IsPaneOpen,
+                    Converter={StaticResource SidebarIconConverter}}" />
             </Button>  
         </Grid>
     </Border>
