@@ -1,0 +1,38 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Sidebar Body -->
+    <Style Selector="SplitView">
+        <Setter
+            Property="OpenPaneLength"
+            Value="250"/>
+        <Setter
+            Property="CompactPaneLength"
+            Value="60"/>
+        <Setter
+            Property="DisplayMode" 
+            Value="CompactInline"/>
+        <Setter
+            Property="Background"
+            Value="Pink"/>
+
+    </Style>
+
+    <!-- Sidebar Item List -->
+    <Style Selector="ListBox">
+        <Setter
+            Property="Background"
+            Value="#272741"/>
+    </Style>
+
+    <!-- Sidebar Item -->
+    <Style Selector="StackPanel">
+        <Setter
+            Property="Spacing"
+            Value="15"/>
+        <Setter
+            Property="Orientation"
+            Value="Horizontal"/>
+    </Style>
+
+</Styles>
