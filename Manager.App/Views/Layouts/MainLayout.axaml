@@ -1,0 +1,36 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:Manager.App.ViewModels"
+             xmlns:layouts="using:Manager.App.Views.Layouts"
+             x:Class="Manager.App.Views.Layouts.MainLayout"
+             x:DataType="vm:MainViewModel">
+
+
+    <Grid RowDefinitions="48,*">
+        <Border Grid.Row="0" Background="#111111">
+            <Grid ColumnDefinitions="48, *">
+                <Button Grid.Column="0"
+                        Width="28"
+                        Height="28"
+                        Margin="20"
+                        HorizontalAlignment="Center"
+                        Command="{Binding TogglePaneCommand}">
+                    <Grid>
+                        <PathIcon Data="{StaticResource sidebar_close_regular}"
+                                  IsVisible="{Binding IsPaneOpen}"
+                                  Width="13" Height="13"/>
+
+                        <PathIcon Data="{StaticResource sidebar_open_regular}"
+                                  IsVisible="{Binding IsPaneClosed}"
+                                  Width="13" Height="13"/> 
+                    </Grid>
+
+                </Button>
+                
+            </Grid>
+        </Border>
+
+        <layouts:Sidebar Grid.Row="1"/>
+    </Grid>
+
+</UserControl>

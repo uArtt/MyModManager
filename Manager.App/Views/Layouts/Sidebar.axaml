@@ -1,0 +1,38 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:models="using:Manager.App.Models"
+             xmlns:vm="using:Manager.App.ViewModels"
+             x:DataType="vm:MainViewModel"
+             x:Class="Manager.App.Views.Layouts.Sidebar">
+
+    <SplitView DisplayMode="CompactInline"
+               IsPaneOpen="{Binding IsPaneOpen}">
+        <SplitView.Pane>
+            <Grid RowDefinitions="*">
+                <ListBox ItemsSource="{Binding Items}"
+                         SelectedItem="{Binding SelectedSidebarItem}"
+                         Background="#111111">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate DataType="{x:Type models:SidebarItemModel}">
+                            <StackPanel Spacing="15" 
+                                        Orientation="Horizontal">
+                                <TextBlock Text="{Binding Label}"/>
+                                <PathIcon Data="{Binding ItemIcon}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>  
+            </Grid>
+        </SplitView.Pane>
+        <SplitView.Content>
+            <Border CornerRadius="20"
+                    Margin="0, 0, 5, 5">
+                    <TransitioningContentControl Content="{Binding CurrentPage}">
+                        
+                    </TransitioningContentControl>
+   
+            </Border>
+        </SplitView.Content>
+    </SplitView>
+
+</UserControl>
